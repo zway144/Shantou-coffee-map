@@ -59,6 +59,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2rem 4rem;
+    padding-top: calc(2rem + env(safe-area-inset-top, 0px));
     position: relative;
     overflow: hidden;
     background: var(--warm-white);
@@ -548,6 +549,13 @@ body {
 /* Tags Bar */
 .tags-bar {
     padding: 0.6rem 2rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.tags-bar::-webkit-scrollbar {
+    display: none;
 }
 
 /* ── Featured Strip ── */
@@ -1077,6 +1085,7 @@ body {
     background: rgba(200,185,168,0.2);
     border: 1px solid rgba(200,185,168,0.2);
     margin-bottom: 4rem;
+    overflow: hidden;
 }
 
 .place-card {
@@ -1316,6 +1325,7 @@ body {
 .site-footer {
     text-align: center;
     padding: 3rem 2rem;
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
     background: var(--warm-white);
     border-top: 1px solid rgba(200,185,168,0.2);
 }
@@ -1347,9 +1357,46 @@ body {
 }
 
 /* ── Responsive ── */
+/* ── Touch-friendly active states ── */
+@media (hover: none) {
+    .place-card:active {
+        background: var(--cream);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .place-card:active::before {
+        transform: scaleY(1);
+    }
+
+    .place-card:active .place-card-title {
+        color: var(--japan-blue);
+    }
+
+    /* Disable 3D tilt and shine on touch */
+    .place-card {
+        transform-style: flat;
+        will-change: auto;
+    }
+
+    .place-card .card-shine {
+        display: none;
+    }
+
+    .featured-card:active {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--stone);
+    }
+}
+
 @media (max-width: 768px) {
+    .toolbar {
+        position: sticky;
+        top: 0;
+    }
+
     .toolbar-inner {
-        padding: 0.8rem 1rem;
+        padding: 0.8rem calc(1rem + env(safe-area-inset-left, 0px)) 0.8rem calc(1rem + env(safe-area-inset-right, 0px));
         gap: 0.8rem;
     }
 
@@ -1359,6 +1406,13 @@ body {
 
     .search-box {
         max-width: none;
+    }
+
+    .areas-bar {
+        position: sticky;
+        top: 52px;
+        background: var(--cream);
+        z-index: 99;
     }
 
     .categories-bar {
@@ -1428,6 +1482,7 @@ body {
 
     .place-card {
         padding: 1rem 1.2rem;
+        overflow: hidden;
     }
 
     .place-card-title {

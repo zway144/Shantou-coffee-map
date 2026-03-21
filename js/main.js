@@ -622,10 +622,13 @@
         });
 
         // Touch events
+        let startY;
+
         el.addEventListener('touchstart', (e) => {
             stopMomentum();
             isDown = true;
             startX = e.touches[0].pageX;
+            startY = e.touches[0].pageY;
             startScrollLeft = el.scrollLeft;
             lastX = e.touches[0].pageX;
             lastTime = performance.now();
@@ -635,6 +638,15 @@
         el.addEventListener('touchmove', (e) => {
             if (!isDown) return;
             const x = e.touches[0].pageX;
+            const y = e.touches[0].pageY;
+            const dx = Math.abs(x - startX);
+            const dy = Math.abs(y - startY);
+
+            // If horizontal drag is dominant, prevent vertical scroll
+            if (dx > dy && dx > 5) {
+                e.preventDefault();
+            }
+
             const walk = (x - startX) * 1.2;
             el.scrollLeft = startScrollLeft - walk;
 
@@ -647,7 +659,7 @@
             lastTime = now;
 
             updatePourIndicator();
-        }, { passive: true });
+        }, { passive: false });
 
         el.addEventListener('touchend', () => {
             if (!isDown) return;
