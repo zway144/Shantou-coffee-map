@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garry's Coffee Map | 汕头咖啡地图</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Decorative elements -->
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+        <div class="dot dot-4"></div>
+        <div class="overlap-slash"></div>
+        <div class="corner-accent"></div>
+
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-kanji">Shantou</p>
+                <h1 class="hero-title">
+                    <span class="word-wrap"><span class="word">Garry's</span></span>
+                    <span class="word-wrap"><span class="word"><em>Coffee</em></span></span>
+                    <span class="word-wrap"><span class="word">Map</span></span>
+                </h1>
+                <p class="hero-subtitle">Coffee so good, you'll forgive Shantou's traffic</p>
+                <div class="hero-count">
+                    <div class="hero-count-item">
+                        <div class="hero-count-number" id="shopCount">43</div>
+                        <div class="hero-count-label">Coffee Shops</div>
+                    </div>
+                    <div class="hero-count-item">
+                        <div class="hero-count-number" id="areaCount">4</div>
+                        <div class="hero-count-label">Areas</div>
+                    </div>
+                    <div class="hero-count-item">
+                        <div class="hero-count-number">4.5</div>
+                        <div class="hero-count-label">Avg Rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <img src="images/hero-coffee-nobg.png" alt="Coffee Illustration">
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Toolbar -->
+    <div class="toolbar" id="toolbar">
+        <div class="toolbar-inner">
+            <a href="#" class="toolbar-logo">Garry's <em>Coffee</em></a>
+            <div class="search-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="搜索咖啡店...">
+            </div>
+            <div class="result-count" id="resultCount"></div>
+        </div>
+    </div>
+
+    <!-- Categories Bar - Areas (Dark) -->
+    <div class="areas-bar">
+        <div class="areas-bar-inner">
+            <ul class="categories-list" id="areasList"></ul>
+        </div>
+    </div>
+
+    <!-- Categories Bar - Tags -->
+    <div class="categories-bar tags-bar">
+        <ul class="categories-list" id="categoriesList"></ul>
+    </div>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="featured-header">
+            <h2 class="featured-title">Garry's Top Pick</h2>
+            <p class="featured-subtitle">Even 胶己人 would fight for these</p>
+        </div>
+        <div class="featured-scroll" id="featuredScroll"></div>
+        <!-- Coffee Pour Progress Indicator -->
+        <div class="pour-indicator" id="pourIndicator">
+            <svg class="pour-cup" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Cup body - wobbly marker lines -->
+                <path d="M12,22 C11,23 9,25 8,32 C6,44 5,56 7,64 C8,68 10,71 14,73 C18,75 26,76 32,76 C38,76 46,75 50,73 C54,71 56,68 57,64 C59,56 58,44 56,32 C55,25 53,23 52,22"
+                      stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Cup bottom curve -->
+                <path d="M14,73 C18,77 26,78 32,78 C38,78 46,77 50,73"
+                      stroke="var(--ink)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <!-- Cup rim - slightly thicker, wobbly -->
+                <path d="M10,22 C10,20 12,18 16,17 C22,16 28,15.5 32,15.5 C36,15.5 42,16 48,17 C52,18 54,20 54,22"
+                      stroke="var(--ink)" stroke-width="2.8" stroke-linecap="round"/>
+                <!-- Handle - chunky doodle style -->
+                <path d="M54,30 C58,30 62,33 62,40 C62,47 58,50 54,50"
+                      stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+                <!-- Coffee liquid fill (clipped to cup interior) -->
+                <clipPath id="cupClip">
+                    <path d="M10,22 C9,25 8,32 7,40 C5.5,52 6,62 7,64 C8,68 10,71 14,73 C18,76 26,77 32,77 C38,77 46,76 50,73 C54,71 56,68 57,64 C58,62 58.5,52 57,40 C56,32 55,25 54,22 Z"/>
+                </clipPath>
+                <g clip-path="url(#cupClip)">
+                    <!-- Liquid rectangle that rises from bottom -->
+                    <rect class="pour-liquid" id="pourLiquid" x="5" y="78" width="54" height="60"
+                          fill="var(--ink)" opacity="0.15"/>
+                    <!-- Wobbly surface line of the liquid -->
+                    <path class="pour-surface" id="pourSurface"
+                          d="M8,78 C14,76 20,77 26,75.5 C32,74 38,76 44,75 C50,74 54,76 58,78"
+                          stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.4"/>
+                </g>
+                <!-- Steam lines - wiggly, playful -->
+                <g class="pour-steam" id="pourSteam" opacity="0">
+                    <path d="M24,14 C23,10 25,7 24,3" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.3"/>
+                    <path d="M32,13 C33,8 31,5 32,1" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.25"/>
+                    <path d="M40,14 C39,10 41,6 40,2" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.3"/>
+                </g>
+                <!-- Little face on the cup - two dots and a tiny smile -->
+                <circle cx="26" cy="44" r="1.8" fill="var(--ink)" opacity="0.5"/>
+                <circle cx="38" cy="44" r="1.8" fill="var(--ink)" opacity="0.5"/>
+                <path d="M28,50 C30,53 34,53 36,50" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+            </svg>
+            <span class="pour-label" id="pourLabel">1 / 7</span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent"></main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p class="footer-text">Garry's Coffee Map · Shantou</p>
+    </footer>
+
+    <!-- Thought Bubble Portal - at body level for highest z-index -->
+    <div class="thought-bubble-portal" id="thoughtPortal">
+        <div class="thought-dot thought-dot-1"></div>
+        <div class="thought-dot thought-dot-2"></div>
+        <div class="thought-dot thought-dot-3"></div>
+        <div class="thought-cloud">
+            <span class="thought-label">Why I pick</span>
+            <p class="thought-text" id="thoughtText"></p>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
