@@ -8,7 +8,7 @@ const coffeeShops = [
         lat: 23.358146,
         lng: 116.7449,
         area: "龙湖区",
-        rating: 4.8,
+        rating: 4.5,
         tags: ["环境好评", "意式好评"],
         featured: false
     },
@@ -19,7 +19,7 @@ const coffeeShops = [
         lat: 23.359322,
         lng: 116.735806,
         area: "龙湖区",
-        rating: 4.7,
+        rating: 4.5,
         tags: ["手冲好评"],
         featured: true
     },
@@ -30,7 +30,7 @@ const coffeeShops = [
         lat: 23.370753,
         lng: 116.724894,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.5,
         tags: ["意式好评"],
         featured: false
     },
@@ -52,7 +52,7 @@ const coffeeShops = [
         lat: 23.362748,
         lng: 116.730859,
         area: "龙湖区",
-        rating: 4.6,
+        rating: 4.4,
         tags: ["手冲好评"],
         featured: true
     },
@@ -63,7 +63,7 @@ const coffeeShops = [
         lat: 23.360,
         lng: 116.686,
         area: "龙湖区",
-        rating: 4.5,
+        rating: 4.4,
         tags: ["意式好评"],
         featured: false,
         closed: true
@@ -86,7 +86,7 @@ const coffeeShops = [
         lat: 23.35851,
         lng: 116.71456,
         area: "金平区",
-        rating: 4.4,
+        rating: 4.5,
         tags: ["特调好评"],
         featured: true
     },
@@ -108,7 +108,7 @@ const coffeeShops = [
         lat: 23.339358,
         lng: 116.7816,
         area: "东海岸",
-        rating: 4.8,
+        rating: 4.4,
         tags: ["环境好评"],
         featured: false
     },
@@ -141,7 +141,7 @@ const coffeeShops = [
         lat: 23.361345,
         lng: 116.718974,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.5,
         tags: ["环境好评"],
         featured: false
     },
@@ -152,7 +152,7 @@ const coffeeShops = [
         lat: 23.360411,
         lng: 116.722512,
         area: "龙湖区",
-        rating: 4.6,
+        rating: 4.5,
         tags: ["意式好评"],
         featured: false
     },
@@ -174,7 +174,7 @@ const coffeeShops = [
         lat: 23.360916,
         lng: 116.740049,
         area: "龙湖区",
-        rating: 4.7,
+        rating: 4.4,
         tags: ["意式好评"],
         featured: false
     },
@@ -185,7 +185,7 @@ const coffeeShops = [
         lat: 23.363003,
         lng: 116.722275,
         area: "龙湖区",
-        rating: 4.4,
+        rating: 4.5,
         tags: ["特调好评"],
         featured: true
     },
@@ -196,7 +196,7 @@ const coffeeShops = [
         lat: 23.342269,
         lng: 116.765498,
         area: "东海岸",
-        rating: 4.6,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -218,7 +218,7 @@ const coffeeShops = [
         lat: 23.356389,
         lng: 116.675987,
         area: "金平区",
-        rating: 4.7,
+        rating: 4.4,
         tags: ["环境好评"],
         featured: false
     },
@@ -229,7 +229,7 @@ const coffeeShops = [
         lat: 23.352148,
         lng: 116.67293,
         area: "金平区",
-        rating: 4.5,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -240,7 +240,7 @@ const coffeeShops = [
         lat: 23.362738,
         lng: 116.722639,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.5,
         tags: [],
         featured: false
     },
@@ -251,7 +251,7 @@ const coffeeShops = [
         lat: 23.35997,
         lng: 116.729965,
         area: "龙湖区",
-        rating: 4.5,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -262,7 +262,7 @@ const coffeeShops = [
         lat: 23.366798,
         lng: 116.725494,
         area: "龙湖区",
-        rating: 4.6,
+        rating: 4.5,
         tags: ["手冲好评"],
         featured: false
     },
@@ -306,7 +306,7 @@ const coffeeShops = [
         lat: 23.366798,
         lng: 116.725494,
         area: "龙湖区",
-        rating: 4.4,
+        rating: 4.5,
         tags: ["环境好评"],
         featured: false
     },
@@ -317,7 +317,7 @@ const coffeeShops = [
         lat: 23.371085,
         lng: 116.725075,
         area: "龙湖区",
-        rating: 4.6,
+        rating: 4.4,
         tags: ["宠物友好"],
         featured: false
     },
@@ -328,7 +328,7 @@ const coffeeShops = [
         lat: 23.363592,
         lng: 116.727925,
         area: "龙湖区",
-        rating: 4.5,
+        rating: 4.7,
         tags: [],
         featured: false
     },
@@ -361,7 +361,7 @@ const coffeeShops = [
         lat: 23.371449,
         lng: 116.720916,
         area: "龙湖区",
-        rating: 4.2,
+        rating: 4.5,
         tags: [],
         featured: false
     },
@@ -383,7 +383,7 @@ const coffeeShops = [
         lat: 23.360132,
         lng: 116.723365,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.4,
         tags: ["特调好评"],
         featured: false
     },
@@ -405,7 +405,7 @@ const coffeeShops = [
         lat: 23.362,
         lng: 116.708868,
         area: "龙湖区",
-        rating: 4.4,
+        rating: 4.5,
         tags: ["意式好评"],
         featured: false
     },
@@ -416,7 +416,7 @@ const coffeeShops = [
         lat: 23.359898,
         lng: 116.74487,
         area: "龙湖区",
-        rating: 4.2,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -427,7 +427,7 @@ const coffeeShops = [
         lat: 23.357364,
         lng: 116.729706,
         area: "龙湖区",
-        rating: 4.5,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -438,7 +438,7 @@ const coffeeShops = [
         lat: 23.372211,
         lng: 116.716464,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -460,7 +460,7 @@ const coffeeShops = [
         lat: 23.350208,
         lng: 116.730761,
         area: "龙湖区",
-        rating: 4.5,
+        rating: 4.6,
         tags: ["环境好评"],
         featured: false
     },
@@ -471,7 +471,7 @@ const coffeeShops = [
         lat: 23.36378,
         lng: 116.722144,
         area: "龙湖区",
-        rating: 4.4,
+        rating: 4.5,
         tags: ["特调好评"],
         featured: true
     },
@@ -482,7 +482,7 @@ const coffeeShops = [
         lat: 23.381298,
         lng: 116.726995,
         area: "龙湖区",
-        rating: 4.5, // TODO: rating 待 Garry 确认
+        rating: 4.3,
         tags: ["环境好评"],
         featured: false
     },
@@ -493,7 +493,7 @@ const coffeeShops = [
         lat: 23.364459,
         lng: 116.716612,
         area: "龙湖区",
-        rating: 4.5, // TODO: rating 待 Garry 确认
+        rating: 4.5,
         tags: ["环境好评"],
         featured: false
     },
@@ -504,7 +504,7 @@ const coffeeShops = [
         lat: 23.3747,
         lng: 116.735108,
         area: "龙湖区",
-        rating: 4.5, // TODO: rating 待 Garry 确认
+        rating: 4.4,
         tags: ["环境好评"],
         featured: false
     },
@@ -515,7 +515,7 @@ const coffeeShops = [
         lat: 23.396358,
         lng: 116.715099,
         area: "金平区",
-        rating: 4.5, // TODO: rating 待 Garry 确认
+        rating: 4.4,
         tags: ["手冲好评"],
         featured: false
     },
@@ -526,7 +526,7 @@ const coffeeShops = [
         lat: 23.362126,
         lng: 116.747253,
         area: "龙湖区",
-        rating: 4.5, // TODO: rating 待 Garry 确认
+        rating: 4.5,
         tags: ["宠物友好"],
         featured: false
     }
