@@ -75,7 +75,7 @@ const coffeeShops = [
         lat: 23.352371,
         lng: 116.733976,
         area: "东海岸",
-        rating: 4.6,
+        rating: 4.5,
         tags: ["环境好评", "手冲好评"],
         featured: true
     },
@@ -97,7 +97,7 @@ const coffeeShops = [
         lat: 23.364996,
         lng: 116.745567,
         area: "龙湖区",
-        rating: 4.2,
+        rating: 4.6,
         tags: [],
         featured: false
     },
@@ -130,7 +130,7 @@ const coffeeShops = [
         lat: 23.364948,
         lng: 116.723403,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.4,
         tags: [],
         featured: false
     },
@@ -295,7 +295,7 @@ const coffeeShops = [
         lat: 23.369335,
         lng: 116.725215,
         area: "龙湖区",
-        rating: 4.3,
+        rating: 4.4,
         tags: [],
         featured: false
     },
