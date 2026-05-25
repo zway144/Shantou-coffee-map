@@ -494,7 +494,7 @@ const coffeeShops = [
         lng: 116.716612,
         area: "龙湖区",
         rating: 4.5, // TODO: rating 待 Garry 确认
-        tags: [],
+        tags: ["环境好评"],
         featured: false
     },
     {
@@ -535,7 +535,7 @@ const coffeeShops = [
 // 分类数据
 const categories = [
     { id: "all", name: "ALL", count: 48 },
-    { id: "环境好评", name: "Vibe", count: 9 },
+    { id: "环境好评", name: "Vibe", count: 10 },
     { id: "意式好评", name: "Espresso", count: 7 },
     { id: "手冲好评", name: "Pour-over", count: 5 },
     { id: "宠物友好", name: "Pet Friendly", count: 6 },
