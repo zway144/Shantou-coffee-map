@@ -360,7 +360,6 @@ body {
     background: rgba(247,243,237,0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(200,185,168,0.3);
     padding: 0;
     transition: box-shadow 0.3s ease;
 }
@@ -502,7 +501,6 @@ body {
 .areas-bar {
     background: transparent;
     padding: 0;
-    border-bottom: 1px solid rgba(200,185,168,0.3);
 }
 
 .areas-bar-inner {
@@ -531,8 +529,9 @@ body {
 }
 
 .areas-bar .cat-btn:hover {
-    background: rgba(200,185,168,0.15);
-    color: var(--ink);
+    background: transparent;
+    color: var(--japan-blue);
+    border-color: var(--japan-blue-soft);
 }
 
 .areas-bar .cat-btn.active {
@@ -573,7 +572,7 @@ body {
 .featured-header {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem 1.5rem;
+    padding: 0 2rem 0.25rem;
     display: flex;
     align-items: baseline;
     gap: 1rem;
@@ -597,7 +596,7 @@ body {
     gap: 1rem;
     overflow-x: auto;
     overflow-y: visible;
-    padding: 0 2rem 1rem;
+    padding: 1.25rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
     scrollbar-width: none;
