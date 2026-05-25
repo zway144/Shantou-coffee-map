@@ -1,82 +1,69 @@
 # Garry's Coffee Map | 汕头咖啡地图
 
-汕头 43 家精选咖啡店的双层筛选发现工具，支持区域 × 标签联动筛选，点击任意卡片跳转高德地图导航。
+一个给汕头咖啡爱好者用的咖啡店发现地图。收录 48 家店，支持按区域、标签和关键词筛选，点击店铺卡片可跳转高德地图查看位置。
 
-**[→ Live Demo](https://zway144.github.io/Shantou-coffee-map)**
+**在线访问：** https://garryscoffee.com
 
----
+## 适合谁
 
-## 功能亮点
+- 想在汕头找咖啡店的人
+- 想按「手冲 / 意式 / 特调 / 宠物友好 / 环境」快速筛选的人
+- 想把咖啡店收藏、分享、导航给朋友的人
 
-- **双层分类筛选** — 区域栏（龙湖 / 金平 / 东海岸 / 澄海）× 标签栏（环境 / 意式 / 手冲 / 宠物友好 / 特调），二选一联动互斥
-- **Hero 入场动画** — 词组逐词滑入、咖啡杯浮动旋转、装饰性虚线圆点
-- **精选推荐横滑区** — 拖拽惯性 + 磁性吸附 + 咖啡杯液位进度指示器 + 悬停推荐语气泡（Why I pick）
-- **店铺卡片交互** — 悬停 3D 倾斜 + 镜面高光 + 左侧彩色竖条滑入，点击跳转高德地图 App
-- **响应式适配** — 移动端触控优化，全端一致体验
+## 功能
 
----
+- 区域筛选：龙湖、金平、东海岸、澄海
+- 标签筛选：环境好评、意式好评、手冲好评、宠物友好、特调好评
+- 关键词搜索：店名、区域、地址、标签均可搜索
+- 精选横滑推荐区
+- 点击店铺卡片跳转高德地图
+- 移动端和桌面端自适应
 
-## 快速开始
+## 技术
+
+这是一个无构建步骤的静态网页项目：
+
+- HTML
+- CSS
+- Vanilla JavaScript
+- GitHub Pages
+
+## 本地运行
+
+直接打开 `index.html` 即可。也可以用 VS Code Live Server 或任意静态服务器预览。
 
 ```bash
-# 直接打开 index.html 即可，无需任何构建
-open index.html
+python -m http.server 8000
 ```
 
-> 推荐使用 VS Code Live Server 或任意本地服务器，避免跨域问题。
+然后访问：
 
----
-
-## 技术栈
-
-| 层级 | 技术 |
-|------|------|
-| 结构 | HTML5 + CSS Custom Properties |
-| 样式 | 原生 CSS（无框架） |
-| 交互 | Vanilla JavaScript (ES6+) |
-| 地图 | 高德地图 URI API |
-| 字体 | Cormorant Garamond + DM Sans + Noto Sans SC (Google Fonts) |
-
----
+```txt
+http://localhost:8000
+```
 
 ## 项目结构
 
-```
+```txt
 shantou-coffee-map/
-├── index.html          # 单页入口
-├── README.md           # 本文件
+├── index.html
 ├── css/
-│   └── style.css       # 全站样式
+│   └── style.css
 ├── js/
-│   ├── main.js         # 页面逻辑、筛选、交互
-│   └── data.js         # 咖啡店数据（43 条）
-└── images/
-    └── hero-coffee-nobg.png   # Hero 插图
+│   ├── data.js
+│   └── main.js
+├── images/
+└── CNAME
 ```
 
----
+## 数据说明
 
-## 设计系统
+咖啡店数据维护在 `js/data.js`。如果你发现店铺信息有误、想补充新店，欢迎提交 issue 或 PR。
 
-### 配色
+## 说明
 
-| Token | 色值 | 用途 |
-|-------|------|------|
-| `--cream` | `#F7F3ED` | 主背景 |
-| `--warm-white` | `#FEFCF9` | Hero / 卡片背景 |
-| `--ink` | `#1A1612` | 正文 |
-| `--japan-blue` | `#2B5F8A` | 主强调色 |
-| `--vermillion` | `#C4432A` | 次强调色 |
-| `--sand` | `#E8E0D4` | 边框/分割线 |
-
-### 字体
-
-- **Cormorant Garamond** — 标题、大号数字
-- **DM Sans** — 正文、按钮、标签
-- **Noto Sans SC** — 中文内容
-
----
+本项目是个人整理的汕头咖啡地图，不代表任何店铺或平台官方信息。店铺营业状态、地址、评分和体验可能会变化，出发前建议再自行确认。
 
 ## License
 
-MIT — 欢迎 Fork & PR
+MIT

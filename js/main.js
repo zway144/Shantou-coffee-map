@@ -4,10 +4,6 @@
 (function() {
     'use strict';
 
-    // AMap API Key
-    const AMapKey = 'dabb322f5bae6dc2ce0d30c6c1fff15b';
-    const AMapSecurity = '0c7c2ca3d7924c1bcc5fdf82393a7fad';
-
     // State
     let filteredPlaces = coffeeShops;
     let activeCategory = 'All';
@@ -50,8 +46,8 @@
         7: '环境很好，很适合办公和社交，有双层楼，意式和手冲也不错，好喝值得推荐。',
         44: '很喜欢的店，首先是很喜欢店的logo，其次是特调很好喝，喜欢松香木质调，并且抹茶的特调的顾客会很喜欢，做意式也不错，老板人也很好，特别特别喜欢的店，会不定期刷新一个我出来。',
         8: '特调很不错，用料非常好，我认为是汕头特调最值得来的之一，意式也很不错，如果在市区非常值得去。',
-        6: '曾经有家分店是我之前最经常去的店，因为意式实在太好喝了，并且陪伴了我考雅思的一段小时光，环境不错，非常适合学习党和办公党去，咖啡也很好喝。',
-        18: '非常喜欢他们的特调，是会惊艳到的程度，意式做的也很不错，出品稳定，老板人很好，离咖啡反应很近可以一起去。'
+        18: '非常喜欢他们的特调，是会惊艳到的程度，意式做的也很不错，出品稳定，老板人很好，离咖啡反应很近可以一起去。',
+        33: '很好的社区咖啡店，空间不大，但是分区清晰，还有很可爱的绿植，应该是汕头不多的能做-85°Dirty的店，层次确实很棒，非常值得一试，还有冷萃也很不错，杂味少，干净柔和，风味描述准确，老板也很好，小程序真的特别好看，值得学习！'
     };
 
     // 分类名称映射：中 -> 英
@@ -357,7 +353,8 @@
         const englishTags = place.tags.map(getEnglishTag);
 
         return `
-            <div class="place-card" data-id="${place.id}" data-lat="${place.lat}" data-lng="${place.lng}" data-name="${place.name}" data-address="${place.address}">
+            <div class="place-card${place.closed ? ' place-card--closed' : ''}" data-id="${place.id}" data-lat="${place.lat}" data-lng="${place.lng}" data-name="${place.name}" data-address="${place.address}">
+                ${place.closed ? '<span class="place-card-closed-badge">已关闭 · Closed</span>' : ''}
                 <div class="card-shine"></div>
                 <div class="place-card-top">
                     <h3 class="place-card-title">${place.name}</h3>
